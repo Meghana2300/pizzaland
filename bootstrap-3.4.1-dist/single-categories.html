@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>piza</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link ref="stylesheet" href="css/styles.css">
+    <style>
+      body{
+        font-size: 16px;
+        color: brown;
+        background-color:#951C49;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+      }
+      #header-nav{
+        background-color: darkgoldenrod;
+        border: 0;
+        border-radius: 0;
+        
+      }
+      div.navbar-header{
+        width:1100px;
+      }
+      .logo-image{
+        background-image:url('logo1.png') no-repeat;
+        width: 100px;
+        height: 100px;
+        margin: 10px,10px,10px,0;
+        }
+        
+      .navbar-brand{
+        padding-top: 25px;
+        height:80px;
+
+      }
+      
+      .navbar-brand h1{
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           color: red;
+           font-size:2em;
+           text-transform: uppercase;
+           font-weight: bold;
+           margin-top: 0;
+           margin-bottom: 0;
+           line-height: .1;
+           padding-top: 15px;
+      }
+      .navbar-brand a:hover,.navbar-brand :focus{
+           text-decoration: none;
+      }
+      .navbar-brand p{
+           
+           text-transform: lowercase;
+           color:red;
+           font-size:.9em;
+           margin-top: 15px;
+
+      }
+       .navbar-brand p span{
+           vertical-align: middle;
+           color: red;
+
+      }
+      #nav-list {
+        margin-top: 10px;
+        float:right;
+        height: 100px;
+        width: 400px;
+      }
+      #nav-list a {
+        color: #951C49;
+        text-align:center;
+        padding:26px,10px;
+        padding:10px;
+        float: right;
+        
+      }
+      #nav-list a:hover {
+        background: #E7E7E7;
+      }
+      #nav-list a span { 
+        font-size: 1.5em;
+      }
+      #phone {
+        margin-top: 5px;
+      }
+      #phone a {
+        text-align: right;
+        padding-bottom: 0;
+      }
+      #phone div {
+        color: #557c3e;
+        text-align: right;
+        padding-right: 15px;
+      }
+     .navbar-header button.navbar-toggle,.navbar-header .icon-bar{
+       border:1px solid #61122f;
+     }
+     .navbar-header button.navbar-toggle{
+       clear: both;
+       margin-top: -30px;
+     }
+
+     .navbar-toggle collapsed{
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      }
+
+      .panel-footer {
+        margin-top: 30px;
+        padding-top: 35px;
+        padding-bottom: 30px;
+        background-color: #222;
+        border-top: 0;
+      }
+      .panel-footer div.row {
+        margin-bottom: 35px;
+      }
+      #hours, #Address {
+        line-height:2;
+      }
+      #hours >span, #Address >span {
+        font-size: 1.3em;
+      }
+      #Address p {
+        color:#557c3e;
+        font-size:.8em;
+        line-height:1.8;
+      }
+      #testimonials {
+        font-style: italic;
+      }
+      #testimonials p:nth-child(2) {
+        margin-top: 25px;
+      }
+
+      .container.jumbotron {
+        box-shadow: 0 0 0 #3f0c1f;
+        border:1px solid #3f0c1f;
+       
+      }
+      div.jumbotron {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        }
+      
+
+      #menu-tile,#special-tile,#map-tile {
+        height: 250px;
+        width:100%;
+        margin-bottom: 15px;
+        position: relative;
+        border: 2px solid #3f0c1f;
+        overflow: hidden;
+       
+      }
+      #menu-tile:hover,#special-tile:hover,#map-tile:hover {
+        box-shadow: 0 1px 5px 1px #cccccc;
+      }
+
+      #menu-tile {
+        background-image:url('menu.jpg') no-repeat;
+        background-position: center;
+        
+
+      }
+      #special-tile {
+        background-image:url('spl.jpg') no-repeat;
+        background-position:center;
+        
+      }
+
+      #menu-tile span,#special-tile span,#map-tile span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        opacity: .8;
+      }
+
+      div#main-content.container {
+          color:#143d59;
+
+      }
+      div.text-center {
+          color: #143d59;
+
+      }
+      .category-tile {
+          position: relative;
+          border: 2px solid #3f0c1f;
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 15px;
+          overflow: hidden;
+      }
+      .category-tile span {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 1.3em;
+          text-transform: uppercase;
+          background-color: #000;
+          color: #fff;
+          opacity: .8;
+      }
+      .category-tile :hover {
+          box-shadow: 0,1px,5px,1px,#cccccc;
+      }
+       div #pizza,#pop,#fries,#ice li {
+           color: darkgoldenrod;
+          
+       }
+      
+
+
+
+
+     @media(min-width: width 1200px){
+       .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:45px;
+        width:200px;
+
+       }
+
+     }
+     @media(min-width:992px) and (max-width:1199px){
+      .navbar-brand h1{
+        font-size: 5vw;
+        padding-top: 10px;
+      }
+      .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:258px;
+        
+
+       }
+
+     }
+     @media(min-width:768px)and (max-width: 991px){
+      .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:232px;
+        
+       }
+
+     }
+     @media(max-width: 767px){
+       .panel-footer section {
+         margin-bottom: 30px;
+         text-align: center;
+       }
+       .panel-footer section:nth-child(3){
+         margin-bottom: 0px;
+       }
+       .panel-footer section hr {
+         width:50%
+       }
+
+
+
+      .container.jumbotron{
+       padding: 0;
+       margin-top: 30px;
+        
+       }
+       #menu-tile, #special-tile {
+         width: 360px;
+         margin: 0,auto 15px;
+       }
+
+     }
+     @media (max-width: 479px) {
+       #menu-tile,#special-tile {
+         width: 280px;
+         margin: 0,auto,15px;
+       }
+     }
+      
+      </style>
+</head>
+  <body>
+    
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header"width=1100px;>
+                <a href="onsite.html" class="pull-left">
+                  <img class ="logo-image"src="logo1.png"alt="logo image">
+               <div id="logo-image" alt="logo-image"></div>
+                </a>
+                <div class="navbar-brand">
+                  <a href="onsite.html"><h1>The Pizza Land</h1></a>
+                  <p><span>Okay, but first, pizza.</span></p>
+                </div>
+                <button type="button" class="navbar-toggle collapsed"data-
+                toggle="collapse"data-taget="#collapsable-nav" aria-
+                expanded="false" >
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            </button>
+           </div>
+
+           <div id="collapsable-nav" class="collapse navbar-collapse">
+             <ul id="nav-list"class="nav navbar-nav navbar-right" >
+              <li >
+                <a href="onsite.html">
+                  <span class="glyphicon glyphicon-home"></span><br
+                  class="hidden-xs">Home
+                </a>
+              </li>
+             <li>
+              <a href="menu-categories.html">
+              <span class="glyphicon glyphicon-cutlery"></span><br
+              class="hidden-xs">Menu</a>
+             </li>
+             <li>
+               <a href="#">
+                 <span class="glyphicon glyphicon-info-sign"></span>
+                 <br class="hidden-xs">About</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-phone"></span>
+                  <br class="hidden-xs">contact</a>
+                 </li>
+                 <li id="phone"class="hidden-xs">
+                   <a href="tel:8190553322">
+                     <span>8190553322</span></a><div>*we deliver</div>
+                 </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="main-content"class="container">
+        <h2 id="menu-categories title" class="text-center"> SP-menu-categories</h2>
+          <div class="text-center">
+              staters-veg. non-veg. combos<br>BESTSELLERS OF U.S PIZZA
+          </div>
+          <section class="row">
+              <div class="col-md-3">
+              <div class="category-tile">
+                <a href="javascript:void(0)" class="hover-opacity" onclick="openImg('pizza');">
+                  <img width="200" height="200" src="pizza.jpg" 
+                  alt="fast"><span>pizza</span></a>
+              </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-tile">
+                    <a href="javascript:void(0)" class="hover-opacity" onclick="openImg('pop');">
+                <img width="200" height="200" src="pop.jpg" 
+                alt="fast"><span>fried chicken</span></a>
+            </div>
+        </div>
+            <div class="col-md-3">
+            <div class="category-tile">
+                <a href="javascript:void(0)" class="hover-opacity" onclick="openImg('fries');">
+                <img width="200" height="200" src="fries.jpg" 
+                alt="fast"><span>side kicks</span></a>
+            </div>
+        </div>
+            <div class="col-md-3">
+            <div class="category-tile">
+                <a href="javascript:void(0)" class="hover-opacity" onclick="openImg('ice');">
+                <img width="200" height="200" src="ice.jpg" 
+                alt="fast"><span>deserts</span></a>
+            </div>
+        </div><br>
+        <div id="pizza" class="picture display-container" style="display:none">
+            <h3>YUMM Pizza</h3>
+            <p><ul style="list-style-type:square;">
+                <section class=col-sm-6>
+                    <h3>Veg-Pizza</h3>
+                    <li>American Heat
+                        BESTSELLER<br><br>
+                        Baby Corn, Green Pepper, Onion. Cheese And Jalapenos.
+                        <span>&#8377; 150</span>
+                    </li>
+                    <li>Tandoori Paneer<br>
+                        Tandoor Paneer, Onion, Green Pepper, Tomato, Cheese, Coriander.<br>
+                        <span>&#8377;140</span></li>
+                        <section class=col-sm-6> 
+                            <h3>Non Veg-Pizza </h3>
+                            <li>Regular Mexican Passion<br>
+                                BESTSELLER
+                                Mexican Chicken, Baby Corn, Cheese, And Jalapenos.<br>
+                                <span>&#8377;140</span>
+        
+                            </li>
+                            <li>Texas Barbeque<br>
+                                BESTSELLER
+                                Barbeque Chicken, Chicken Sausage, Olives, Sweetcorn And Jalapenos.<br>
+                                <span>&#8377;150</span>
+        
+                            </li>
+                            <li>Tandoori Chicken<br>
+                                BESTSELLER
+                                Tandoor Chicken, Onion, Green Pepper, Tomato, Coriander And Cheese.<br>
+                                <span>&#8377;140</span>
+                            </li>
+                        </u>
+                        </p>
+                        <span onclick="this.parentElement.style.display='none'" 
+            class="display-topright button transparent text-white"></span>
+            <div class="display-bottomleft container padding text-white"></div>
+          </div>
+          <div id="pop" class="picture display-container" style="display:none">
+           <h3>Fried-chicken</h3>
+            <p><ul style="list-style-type:square;">
+                <li>Chicken
+                    BESTSELLER
+                    <span>&#8377;60</span>
+
+                </li>
+                <li>Chicken Popcorn
+                    BESTSELLER
+                    <span>&#8377; 90</span>
+                </li>
+                    <li>Chicken Strips
+                        BESTSELLER
+                        <span>&#8377; 110</span>
+                    </li>
+                </ul></p> 
+            </div>
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white"></span>
+            <div class="w3-display-bottomleft w3-container w3-padding w3-text-white"></div>
+          </div>
+          <div id="fries" class="picture display-container" style="display:none">
+            <h3>Side Kicks</h3>
+             <p><ul style="list-style-type:square;">
+                <li>French Fries
+                  BESTSELLER
+                  <span>&#8377;80</span>
+              </li>
+                 </ul></p> 
+                </div>
+             <span onclick="this.parentElement.style.display='none'" 
+             ></span>
+             <div class="w3-display-bottomleft w3-container w3-padding w3-text-white"></div>
+              </div>
+               <div id="ice" class="picture display-container" style="display:none">
+            <h3 style="color: darkgoldenrod;">Deserts</h3>
+             <p><ul style="list-style-type:square;">
+                <li>Brownie with Ice Cream (Chocolate)Flavour.
+                    BESTSELLER
+                    <span>&#8377;70</span>
+                </li>
+             </ul></p> 
+           </div>
+             <span onclick="this.parentElement.style.display='none'" 
+             ></span>
+             <div class="w3-display-bottomleft w3-container w3-padding w3-text-white"></div>
+           </div>
+        </section>
+    </div>
+
+      <footer class="panel-footer">
+        <div class="container">
+          <div class="row">
+            <section id="hours" class="col-sm-4">
+              <span>hours:</span><br>
+              mon-sat:11:00am  to 10:30pm<br>
+              sun:12:00am to 11:30pm<br>
+              <hr class="visible-xs">
+            </section>
+            <section id="Address" class="col-sm-4">
+              <span>Address:</span><br>
+              Dwaraka theatre Rd<br>
+               NSP Colony, Nuzividu<br>
+               Andhra Pradesh 521201.
+               <p*>Order by :swiggy, zomato
+                 delivery charges apply.
+               </p>
+               <hr class="visible-xs">
+              </section>
+              <section id="testimonials" class="col-sm-4">
+                <p > " IDEAS ARE LIKE PIZZA DOUGH, MADE TO BE TOSSED AROUND."</p>
+                <p>"Humor keeps us alive. Humor and food. <br>
+                  Don’t forget food. 
+                  You can go a week without laughing."</p>
+              </section>
+            </div>
+          <div class="text-center">&copy; copyright U.S.PIZZA HUB 2015</div>
+        </div>
+      </footer>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquary-12.1.4 min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrpit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function openImg(imgName) {
+          var i, x;
+          x = document.getElementsByClassName("picture");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(imgName).style.display = "block";
+        }
+        </script>
+      
+  </body>
+</html>

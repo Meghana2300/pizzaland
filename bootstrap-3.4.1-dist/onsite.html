@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>piza</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link ref="stylesheet" href="css/styles.css">
+    <style>
+      body{
+        font-size: 16px;
+        color: brown;
+        background-color:#951C49;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+      }
+      #header-nav{
+        background-color: darkgoldenrod;
+        border: 0;
+        border-radius: 0;
+        
+      }
+      div.navbar-header{
+        width:1100px;
+      }
+      .logo-image{
+        background-image:url('logo1.png') no-repeat;
+        width: 150px;
+        height: 150px;
+        margin: 10px,10px,10px,0;
+        }
+        
+      .navbar-brand{
+        padding-top: 25px;
+        height:80px;
+
+      }
+      
+      .navbar-brand h1{
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           color: #0085b8;
+           font-size:3em;
+           text-transform: uppercase;
+           font-weight: bold;
+           margin-top: 0;
+           margin-bottom: 0;
+           line-height: .1;
+           padding-top: 15px;
+      }
+      .navbar-brand a:hover,.navbar-brand :focus{
+           text-decoration: none;
+      }
+      .navbar-brand p{
+           
+           text-transform: lowercase;
+           color:#0085b8;
+           font-size:.9em;
+           margin-top: 15px;
+
+      }
+       .navbar-brand p span{
+           vertical-align: middle;
+           color: #0085b8;
+
+      }
+      #nav-list {
+        margin-top: 10px;
+        float:right;
+        height: 100px;
+        width: 400px;
+      }
+      #nav-list a {
+        color: #951C49;
+        text-align:center;
+        padding:26px,10px;
+        padding:10px;
+        float: right;
+        
+      }
+      #nav-list a:hover {
+        background: #E7E7E7;
+      }
+      #nav-list a span { 
+        font-size: 1.5em;
+      }
+      #phone {
+        margin-top: 5px;
+      }
+      #phone a {
+        text-align: right;
+        padding-bottom: 0;
+      }
+      #phone div {
+        color: #557c3e;
+        text-align: right;
+        padding-right: 15px;
+      }
+     .navbar-header button.navbar-toggle,.navbar-header .icon-bar{
+       border:1px solid #61122f;
+     }
+     .navbar-header button.navbar-toggle{
+       clear: both;
+       margin-top: -30px;
+     }
+
+     .navbar-toggle collapsed{
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      }
+
+      .panel-footer {
+        margin-top: 30px;
+        padding-top: 35px;
+        padding-bottom: 30px;
+        background-color: #222;
+        border-top: 0;
+      }
+      .panel-footer div.row {
+        margin-bottom: 35px;
+      }
+      #hours, #Address {
+        line-height:2;
+      }
+      #hours >span, #Address >span {
+        font-size: 1.3em;
+      }
+      #Address p {
+        color:#557c3e;
+        font-size:.8em;
+        line-height:1.8;
+      }
+      #testimonials {
+        font-style: italic;
+      }
+      #testimonials p:nth-child(2) {
+        margin-top: 25px;
+      }
+
+      .container.jumbotron {
+        box-shadow: 0 0 0 #3f0c1f;
+        border:1px solid #3f0c1f;
+       
+      }
+      div.jumbotron {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        }
+      
+
+      #menu-tile,#special-tile,#map-tile {
+        height: 250px;
+        width:100%;
+        margin-bottom: 15px;
+        position: relative;
+        border: 2px solid #3f0c1f;
+        overflow: hidden;
+       
+      }
+      #menu-tile:hover,#special-tile:hover,#map-tile:hover {
+        box-shadow: 0 1px 5px 1px #cccccc;
+      }
+
+      #menu-tile {
+        background-image:url('menu.jpg') no-repeat;
+        background-position: center;
+        
+
+      }
+      #special-tile {
+        background-image:url('spl.jpg') no-repeat;
+        background-position:center;
+        
+      }
+
+      #menu-tile span,#special-tile span,#map-tile span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        opacity: .8;
+      }
+     @media(min-width: width 1200px){
+       .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:45px;
+        width:200px;
+
+       }
+
+     }
+     @media(min-width:992px) and (max-width:1199px){
+      .navbar-brand h1{
+        font-size: 5vw;
+        padding-top: 10px;
+      }
+      .container.jumbotron{
+        background-image:url('first.jpg') no-repeat;
+        height:258px;
+        
+
+       }
+
+     }
+     @media(min-width:768px)and (max-width: 991px){
+      .container.jumbotron{
+        background-image:url('first.jpg') no-repeat;
+        height:232px;
+        
+       }
+
+     }
+     @media(max-width: 767px){
+       .panel-footer section {
+         margin-bottom: 30px;
+         text-align: center;
+       }
+       .panel-footer section:nth-child(3){
+         margin-bottom: 0px;
+       }
+       .panel-footer section hr {
+         width:50%
+       }
+
+
+
+      .container.jumbotron{
+       padding: 0;
+       margin-top: 30px;
+        
+       }
+       #menu-tile, #special-tile {
+         width: 360px;
+         margin: 0,auto 15px;
+       }
+
+     }
+     @media (max-width: 479px) {
+       #menu-tile,#special-tile {
+         width: 280px;
+         margin: 0,auto,15px;
+       }
+     }
+      
+      </style>
+</head>
+  <body>
+    
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header"width=1100px;>
+                <a href="onsite.html" class="pull-left">
+                  <img class ="logo-image"src="logo1.png"alt="logo image">
+               <div id="logo-image" alt="logo-image"></div>
+                </a>
+                <div class="navbar-brand">
+                  <a href="onsite.html"><h1>The Pizza Land</h1></a>
+                  <p><span>Okay, but first, pizza.</span></p>
+                </div>
+                <button type="button" class="navbar-toggle collapsed"data-
+                toggle="collapse"data-taget="#navbarCollapse" aria-
+                expanded="false" >
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            </button>
+           </div>
+
+           <div id="navbarCollapse" class="navbar-collapse collapse">
+             <ul id="nav-list"class="nav navbar-nav navbar-right" >
+               <li >
+                 <a href="onsite.html">
+                   <span class="glyphicon glyphicon-home"></span><br
+                   class="hidden-xs">Home
+                 </a>
+               </li>
+             <li >
+              <a href="menu-categories.html">
+              <span class="glyphicon glyphicon-cutlery"></span><br
+              class="hidden-xs">Menu</a>
+             </li>
+             <li>
+               <a href="#">
+                 <span class="glyphicon glyphicon-info-sign"></span>
+                 <br class="hidden-xs">About</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-phone"></span>
+                  <br class="hidden-xs">contact</a>
+                 </li>
+                 <li id="phone"class="hidden-xs">
+                   <a href="tel:8190553322">
+                     <span>8190553322</span></a><div>*we deliver</div>
+                 </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="main-content"class="container">
+        <div class="jumbotron" style="padding-right: 0px; padding-left: 0px;">
+          <img src="first.jpg" alt="food pic" style="width:auto;"
+          
+          class="img-responsive">
+        </div>
+        <div id="home-tiles" class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            
+            <a href="menu-categories.html"><div id="menu-tile"><img src="menu.jpg" style="width:100%"class="img-responsive"alt="food list" >
+              <span>menu</span></div></a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+             
+            <a href="single-categories.html"><div id="special-tile"><img src="spl.jpg"style="width:100% "class="img-responsive"alt="special" ><span>special</span></div></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <a href="https://goo.gl/maps/BZDQqwwKbiQCafnNA" target="blank">
+            <div id="map-tile">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15279.13684352141!2d80.8505193!3d16.7874082!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28627a665b8e694e!2sU%20S%20Pizza%20Co!5e0!3m2!1sen!2sin!4v1588303272160!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <span>maps</span></div></a>
+        </div>
+
+      </div>
+
+      <footer class="panel-footer">
+        <div class="container">
+          <div class="row">
+            <section id="hours" class="col-sm-4">
+              <span>hours:</span><br>
+              mon-sat:11:00am  to 10:30pm<br>
+              sun:12:00am to 11:30pm<br>
+              <hr class="visible-xs">
+            </section>
+            <section id="Address" class="col-sm-4">
+              <span>Address:</span><br>
+              Dwaraka theatre Rd<br>
+               NSP Colony, Nuzividu<br>
+               Andhra Pradesh 521201.
+               <p*>Order by :swiggy, zomato
+                 delivery charges apply.
+               </p>
+               <hr class="visible-xs">
+              </section>
+              <section id="testimonials" class="col-sm-4">
+                <p > " IDEAS ARE LIKE PIZZA DOUGH, MADE TO BE TOSSED AROUND."</p>
+                <p>"Humor keeps us alive. Humor and food. <br>
+                  Don’t forget food. 
+                  You can go a week without laughing."</p>
+              </section>
+
+          </div>
+          <div class="text-center">&copy; copyright U.S.PIZZA HUB 2015
+
+          </div>
+        </div>
+      </footer>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquary-12.1.4 min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrpit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(function(){ 
+     var navMain = $(".navbar-collapse");
+
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
+    </script>
+      
+  </body>
+</html>

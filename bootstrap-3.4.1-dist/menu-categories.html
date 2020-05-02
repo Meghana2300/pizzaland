@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>piza</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link ref="stylesheet" href="css/styles.css">
+    <style>
+      body{
+        font-size: 16px;
+        color: brown;
+        background-color:#951C49;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+      }
+      #header-nav{
+        background-color: darkgoldenrod;
+        border: 0;
+        border-radius: 0;
+        
+      }
+      div.navbar-header{
+        width:1100px;
+      }
+      .logo-image{
+        background-image:url('logo1.png') no-repeat;
+        width: 100px;
+        height: 100px;
+        margin: 10px,10px,10px,0;
+        }
+        
+      .navbar-brand{
+        padding-top: 25px;
+        height:80px;
+
+      }
+      
+      .navbar-brand h1{
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           color: red;
+           font-size:2em;
+           text-transform: uppercase;
+           font-weight: bold;
+           margin-top: 0;
+           margin-bottom: 0;
+           line-height: .1;
+           padding-top: 15px;
+      }
+      .navbar-brand a:hover,.navbar-brand :focus{
+           text-decoration: none;
+      }
+      .navbar-brand p{
+           
+           text-transform: lowercase;
+           color:red;
+           font-size:.9em;
+           margin-top: 15px;
+
+      }
+       .navbar-brand p span{
+           vertical-align: middle;
+           color: red;
+
+      }
+      #nav-list {
+        margin-top: 10px;
+        float:right;
+        height: 100px;
+        width: 400px;
+      }
+      #nav-list a {
+        color: #951C49;
+        text-align:center;
+        padding:26px,10px;
+        padding:10px;
+        float: right;
+        
+      }
+      #nav-list a:hover {
+        background: #E7E7E7;
+      }
+      #nav-list a span { 
+        font-size: 1.5em;
+      }
+      #phone {
+        margin-top: 5px;
+      }
+      #phone a {
+        text-align: right;
+        padding-bottom: 0;
+      }
+      #phone div {
+        color: #557c3e;
+        text-align: right;
+        padding-right: 15px;
+      }
+     .navbar-header button.navbar-toggle,.navbar-header .icon-bar{
+       border:1px solid #61122f;
+     }
+     .navbar-header button.navbar-toggle{
+       clear: both;
+       margin-top: -30px;
+     }
+
+     .navbar-toggle collapsed{
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      }
+
+      .panel-footer {
+        margin-top: 30px;
+        padding-top: 35px;
+        padding-bottom: 30px;
+        background-color: #222;
+        border-top: 0;
+      }
+      .panel-footer div.row {
+        margin-bottom: 35px;
+      }
+      #hours, #Address {
+        line-height:2;
+      }
+      #hours >span, #Address >span {
+        font-size: 1.3em;
+      }
+      #Address p {
+        color:#557c3e;
+        font-size:.8em;
+        line-height:1.8;
+      }
+      #testimonials {
+        font-style: italic;
+      }
+      #testimonials p:nth-child(2) {
+        margin-top: 25px;
+      }
+
+      .container.jumbotron {
+        box-shadow: 0 0 0 #3f0c1f;
+        border:1px solid #3f0c1f;
+       
+      }
+      div.jumbotron {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        }
+      
+
+      #menu-tile,#special-tile,#map-tile {
+        height: 250px;
+        width:100%;
+        margin-bottom: 15px;
+        position: relative;
+        border: 2px solid #3f0c1f;
+        overflow: hidden;
+       
+      }
+      #menu-tile:hover,#special-tile:hover,#map-tile:hover {
+        box-shadow: 0 1px 5px 1px #cccccc;
+      }
+
+      #menu-tile {
+        background-image:url('menu.jpg') no-repeat;
+        background-position: center;
+        
+
+      }
+      #special-tile {
+        background-image:url('spl.jpg') no-repeat;
+        background-position:center;
+        
+      }
+
+      #menu-tile span,#special-tile span,#map-tile span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        opacity: .8;
+      }
+      
+      div#main-content.container {
+          color:#143d59;
+
+      }
+      div.text-center {
+          color: #143d59;
+
+      }
+      .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 500px;
+        background-color: darkgoldenrod;
+}
+
+/* Style the buttons inside the tab */
+     .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+       padding: 22px 16px;
+       width: 100%;
+       border: none;
+     outline: none;
+     text-align: left;
+     cursor: pointer;
+      font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 1100px;
+  display: none;
+  background-color:darkgoldenrod;
+}
+div.tabcontent h3 {
+    text-align: center;
+    font-family:full Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+div .tabcontent span {
+  content: "\20B9";
+}
+     @media(min-width: width 1200px){
+       .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:45px;
+        width:200px;
+
+       }
+
+     }
+     @media(min-width:992px) and (max-width:1199px){
+      .navbar-brand h1{
+        font-size: 5vw;
+        padding-top: 10px;
+      }
+      .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:258px;
+        
+
+       }
+
+     }
+     @media(min-width:768px)and (max-width: 991px){
+      .container.jumbotron{
+        background-image:url('3.jpg') no-repeat;
+        height:232px;
+        
+       }
+
+     }
+     @media(max-width: 767px){
+       .panel-footer section {
+         margin-bottom: 30px;
+         text-align: center;
+       }
+       .panel-footer section:nth-child(3){
+         margin-bottom: 0px;
+       }
+       .panel-footer section hr {
+         width:50%
+       }
+
+
+
+      .container.jumbotron{
+       padding: 0;
+       margin-top: 30px;
+        
+       }
+       #menu-tile, #special-tile {
+         width: 360px;
+         margin: 0,auto 15px;
+       }
+
+     }
+     @media (max-width: 479px) {
+       #menu-tile,#special-tile {
+         width: 280px;
+         margin: 0,auto,15px;
+       }
+     }
+      
+      </style>
+</head>
+  <body>
+    
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header"width=1100px;>
+                <a href="onsite.html" class="pull-left">
+                  <img class ="logo-image"src="logo1.png"alt="logo image">
+               <div id="logo-image" alt="logo-image"></div>
+                </a>
+                <div class="navbar-brand">
+                  <a href="onsite.html"><h1>The Pizza Land</h1></a>
+                  <p><span>Okay, but first, pizza.</span></p>
+                </div>
+                <button type="button" class="navbar-toggle collapsed"data-
+                toggle="collapse"data-taget="#collapsable-nav" aria-
+                expanded="false" >
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+            </button>
+           </div>
+
+           <div id="collapsable-nav" class="collapse navbar-collapse">
+             <ul id="nav-list"class="nav navbar-nav navbar-right">
+              <li >
+                <a href="onsite.html">
+                  <span class="glyphicon glyphicon-home"></span><br
+                  class="hidden-xs">Home
+                </a>
+              </li>
+             <li>
+              <a href="menu-categories.html">
+              <span class="glyphicon glyphicon-cutlery"></span><br
+              class="hidden-xs">Menu</a>
+             </li>
+             <li>
+               <a href="#">
+                 <span class="glyphicon glyphicon-info-sign"></span>
+                 <br class="hidden-xs">About</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-phone"></span>
+                  <br class="hidden-xs">contact</a>
+                 </li>
+                 <li id="phone"class="hidden-xs">
+                   <a href="tel:8190553322">
+                     <span>8190553322</span></a><div>*we deliver</div>
+                 </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="main-content"class="container">
+          <h2 id="menu-categories title" class="text-center">menu-categories</h2>
+          <div class="text-center">
+              staters-veg. non-veg. combos
+          </div>
+           <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'pizza')">Pizza</button>
+            <button class="tablinks" onmouseover="openCity(event, 'chicken')">Fried chicken</button>
+            <button class="tablinks" onmouseover="openCity(event, 'bread')">Breads</button>
+            <button class="tablinks" onmouseover="openCity(event, 'salads')">Salads</button>
+            <button class="tablinks" onmouseover="openCity(event, 'side kicks')">Side kicks</button>
+            <button class="tablinks" onmouseover="openCity(event, 'shakes')">Shakes</button>
+            <button class="tablinks" onmouseover="openCity(event, 'deserts')">Deserts</button>
+            <button class="tablinks" onmouseover="openCity(event, 'ice-creams')">Ice-creams</button>
+            
+          </div>
+          
+          
+          <div id="pizza" class="tabcontent">
+            <h3>YUMM Pizza</h3>
+            <p><ul style="list-style-type:square;">
+                <section class=col-sm-6>
+                    <h3>Veg-Pizza</h3>
+                <li>Margarita Pizza<br>lots of cheese<br><span>&#8377;80</span></li>
+                <li>Vegetarian Bite<br>
+                    Onion, Green Pepper, Cheese, Andtomato.<br>
+                    <span>&#8377;100</span>
+                </li>
+                <li>Regular Mushroom Garlic<br>
+                    Mushroom, Garlic, Chilli And Cheese.<br>
+                    <span>&#8377;130</span>
+                </li>
+                    <li>Mexican Delight<br>
+                        Sweet Corn, Cheese, Onion, Black Olives And Tomato.<br>
+                        <span>&#8377; 150</span>
+                    </li>
+                        <li>American Heat
+                            BESTSELLER<br><br>
+                            Baby Corn, Green Pepper, Onion. Cheese And Jalapenos.
+                            <span>&#8377; 150</span>
+                        </li>
+                        <li>Hawain Fantasy<br>
+                            Barbeque Paneer, Pineapple, Mushroom, Cheese, And Jalapenos.<br>
+                            <span>&#8377;150</span>
+                        </li>
+                        <li>Fresh Veggie Special<br>
+                            Onion Green Pepper Tomato Mushroom Olives, Sweet Corn Cheese And Paneer.<br>
+                            <span>&#8377;170</span>
+
+                        </li>
+                        <li>Four Seasons Pizza<br>
+                            Onion, Red Pepper, Olives, Mushroom, Green Pepper, Cheese.<br>
+                            <span>&#8377; 160</span>
+
+                        </li>
+                        <li>Tandoori Paneer<br>
+                            Tandoor Paneer, Onion, Green Pepper, Tomato, Cheese, Coriander.<br>
+                            <span>&#8377;140</span>
+
+                        </li>
+                        <li>Yum Dum<br>
+                            Spicy Paneer, Spinach, Onion, Chilli, Garlic, And Cheese.<br>
+                            <span>&#8377; 150</span>
+
+                        </li>
+                        <li>Indian Treat<br>
+                            Onion, Green Pepper, Tomato Chili, Garlic.Cheese, Coriander, Greentea Masala.<br>
+                            <span>&#8377; 150</span>
+                        </li>
+                            <li>Vegetable Heaven Pizza<br>
+                                Mushroom Chilli, Spinach Garlic, Ginger, Tomato, Greenolwes And Cheese.<br>
+                                <span>&#8377;160</span>
+                            </li>
+                            </section>
+                
+                 <section class=col-sm-6> 
+                    <h3>Non Veg-Pizza </h3>
+                    <li>Hot Stuff<br>
+                        Herb Chicken, Green Pepper, Tomato, Cheese And Chilli.<br>
+                        <span>&#8377;130</span>
+                    </li>
+                    <li>Regular Mexican Passion<br>
+                        BESTSELLER
+                        Mexican Chicken, Baby Corn, Cheese, And Jalapenos.<br>
+                        <span>&#8377;140</span>
+
+                    </li>
+                    <li>Texas Barbeque<br>
+                        BESTSELLER
+                        Barbeque Chicken, Chicken Sausage, Olives, Sweetcorn And Jalapenos.<br>
+                        <span>&#8377;150</span>
+
+                    </li>
+                    <li>Mambo Combo<br>
+                        Chcken Sausage, Mexican Chicken, Pepperoni, Onion, Cheese, Jalapenos.<br>
+                        <span>&#8377;160</span>
+
+                    </li>
+                    <li>Pepperoni Plus<br>
+                        Lotus Of Pepperoni And Cheese.<br>
+                        <span>&#8377;160</span>
+
+                    </li>
+                    <li>Sicilian Hawaiian<br>
+                        Baebeque Chicken, Chicken Sausages, Pineapple, Cheese And Jalapenos.<br>
+                        <span>&#8377; 170</span>
+
+                    </li>
+                    <li>Tandoori Chicken<br>
+                        BESTSELLER
+                        Tandoor Chicken, Onion, Green Pepper, Tomato, Coriander And Cheese.<br>
+                        <span>&#8377;140</span>
+                    </li>
+                    <li>Southern Spice<br>
+                        Chettinad Chicken, Onion, Green Pepper, Chilli, Garlic, Cheese, Coriender.<br>
+                        <span>&#8377;160</span>
+                    </li>
+                        <li>Keema Pizza<br>
+                            Chicken Kheema.Moon, Chilli, Garlic Cheese, Tomatoandcoriander.<br>
+                            <span>&#8377;170</span>
+
+                        </li>
+                        <li>Chicken and Spinach <br>
+                            Spinach, Tandoor Chicken, Red Pepper, Chilliandcheese.<br>
+                            <span>&#8377;150</span>
+
+                        </li>
+                        <li>Peri Peri Chicken<br>
+                            Chiitmaou Chicken. Garlic Paprkaginger, Oregano Onion, The America Powocra Cheese.<br>
+                            <span>&#8377; 170</span>
+
+                        </li>
+                        </section>
+                     </ul>
+                    </p>
+            </div>
+          
+          <div id="chicken" class="tabcontent">
+            <h3>Fried-chicken</h3>
+            <p><ul style="list-style-type:square;">
+                <li>Chicken
+                    BESTSELLER
+                    <span>&#8377;60</span>
+
+                </li>
+                <li>Chicken Popcorn
+                    BESTSELLER
+                    <span>&#8377; 90</span>
+                </li>
+                    <li>Chicken Strips
+                        BESTSELLER
+                        <span>&#8377; 110</span>
+                    </li>
+                        <li>Chicken Nuggets
+                            <span>&#8377;90</span>
+                        </li>
+
+            </ul></p> 
+          </div>
+          
+          <div id="bread" class="tabcontent">
+            <h3>Breads</h3>
+            <p><ul style="list-style-type:square;">
+            <li>Garlic Breads
+                <span>&#8377; 50</span>
+            </li>
+            <li>Garlic Bread N Cheese
+                <span>&#8377;60</span>
+
+            </li>
+            <li>Supreme Garlic Bread
+                Chilli, Onion And Cheese.
+                <span>&#8377; 70</span>
+
+            </li>
+            </ul></p>
+          </div>
+          <div id="salads" class="tabcontent">
+              <h3>Salads</h3>
+              <p><ul style="list-style-type:square;">
+            <section class="col-sm-6">
+                <h3>Salads veg</h3>
+                <li>Cottage Cheese
+                    <span>&#8377; 80</span>
+                </li>
+            </section>
+            <section class="col-sm-6">
+                <h3>Salads Non-veg</h3>
+                <li>Hawain
+                    <span>&#8377; 90</span>
+                </li>
+                    <li>Mixed Chicken
+                        <span>&#8377;  90</span>
+
+                    </li>
+            </section>
+            </ul> </p>
+          </div>
+          <div id="side kicks"class="tabcontent">
+              <h3>Side Kicks</h3>
+              <li>French Fries
+                BESTSELLER
+                <span>&#8377; 80</span>
+            </li>
+            <li>Veg Fingers
+                <span>&#8377; 80</span>
+            </li>
+            <li>Aloo Tikka
+                <span>&#8377;80</span>
+            </li>
+            <li>Chilli Garlic Potato Pops
+                <span>&#8377;80</span>
+            </li>
+        </div>
+        <div id="shakes" class="tabcontent">
+            <h3>Shakes</h3>
+            <li>Iced Coffee<br>
+                Espresso + Blond Leg + Milk.<br>
+                <span>&#8377; 80</span>
+            </li>
+            <li>Irish Coffee<br>
+                Irish + Espresso + Blend Ice + Milk.<br>
+                <span>&#8377;85</span>
+            </li>
+            <li>Blasts<br>
+                Any Leg Cream Flavor With Milk And Ice.<br>
+                <span>&#8377;70</span>
+            </li>
+            <li>Mocktails<br>
+                Mix Of Fruit Flavor With Soda.<br>
+                <span>&#8377;70</span>
+            </li>
+        </div>
+        <div id="deserts" class="tabcontent">
+            <h3>Deserts</h3>
+            <li>Sizzling Brownie
+                <span>&#8377; 130</span>
+            </li>
+            <li>Brownie with Ice Cream (Chocolate)Flavour.
+                BESTSELLER
+                <span>&#8377;70</span>
+            </li>
+            <li>Brownie
+                <span>&#8377;55</span>
+
+            </li>
+        </div>
+        <div id="ice-creams"class="tabcontent">
+            <h3>Ice-Creams</h3>
+            <li>Vanilla Ice Cream
+                <span>&#8377;30</span>
+            </li>
+            <li>Strawberry Ice Cream
+                <span>&#8377;30</span>
+            </li>
+            <li>Strawberry Ice Cream
+                <span>&#8377; 30</span>
+            </li>
+            <li>Butterscotch Ice Cream
+                <span>&#8377;40</span>
+            </li>
+            <li>Chocolate Ice Cream
+                <span>&#8377;40</span>
+            </li>
+            <li>Chocochip Ice Cream
+                <span>&#8377;50</span>
+            </li>
+            <li>Black Currant Ice Cream
+                <span>&#8377; 50</span>
+            </li>
+            <li>Kaju Kismish Ice Cream
+                <span>&#8377; 50</span>
+            </li>
+            <li>Fruit Over Load Ice Cream
+                <span>&#8377;50</span>
+            </li>
+            <li>Anjeer Badam Ice Cream
+                <span>&#8377; 50</span>
+            </li>
+            <li>Sitaphal Ice Cream
+                <span>&#8377; 50</span>
+            </li>
+            <li>Pineapple Supreme Ice Cream
+                <span>&#8377;50</span>
+            </li>
+            <li>Carmel Nuts Ice Cream
+                <span>&#8377;50</span>
+            </li>
+            <li>Badam Roasted Ice Cream
+                <span>&#8377; 50</span>
+            </li>
+
+        </div>
+          
+          <div class="clearfix"></div>
+          
+      </div>
+
+      <footer class="panel-footer">
+        <div class="container">
+          <div class="row">
+            <section id="hours" class="col-sm-4">
+              <span>hours:</span><br>
+              mon-sat:11:00am  to 10:30pm<br>
+              sun:12:00am to 11:30pm<br>
+              <hr class="visible-xs">
+            </section>
+            <section id="Address" class="col-sm-4">
+              <span>Address:</span><br>
+              Dwaraka theatre Rd<br>
+               NSP Colony, Nuzividu<br>
+               Andhra Pradesh 521201.
+               <p*>Order by :swiggy, zomato
+                 delivery charges apply.
+               </p>
+               <hr class="visible-xs">
+              </section>
+              <section id="testimonials" class="col-sm-4">
+                <p > " IDEAS ARE LIKE PIZZA DOUGH, MADE TO BE TOSSED AROUND."</p>
+                <p>"Humor keeps us alive. Humor and food. <br>
+                  Don’t forget food. 
+                  You can go a week without laughing."</p>
+              </section>
+
+          </div>
+          <div class="text-center">&copy; copyright U.S.PIZZA HUB 2015
+
+          </div>
+        </div>
+      </footer>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquary-12.1.4 min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrpit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+
+  </body>
+</html>
